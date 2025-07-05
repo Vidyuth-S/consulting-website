@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Public Infrastructure (DPI) & Alternatives - V. Sreenivasan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <!-- Chosen Palette: Warm Neutrals (Light Beige, Dark Slate, Muted Teal) -->
+    <!-- Application Structure Plan: A single-page application with a fixed navigation bar for smooth scrolling between thematic sections (Home, About, Services, Expertise, Contact). This structure provides a seamless narrative flow, guiding visitors from the high-level value proposition to deep-dive expertise areas. The interactive "Pillars" section under Expertise encourages user engagement and exploration of the core research areas. The design is clean, professional, and optimized for readability across all devices. -->
+    <!-- Visualization & Content Choices: The application primarily uses structured HTML and Tailwind CSS to present textual information clearly. The 'Pillars of Expertise' are presented as interactive cards with subtle hover effects to encourage exploration. Instead of charts, we use a clean grid layout and iconography (Unicode characters) to visually separate and highlight key services and concepts. This approach ensures a fast-loading, accessible experience focused on communicating expertise effectively, confirming NO SVG/Mermaid. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="bg-[#FDFBF7] text-[#333D4B]">
+
+    <!-- Header & Navigation (Consistent with main page) -->
+    <header id="header" class="bg-[#FDFBF7] backdrop-blur-md bg-opacity-80 sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html#home" class="text-xl font-bold text-[#1E3A8A]">V. Sreenivasan</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html#about" class="text-[#333D4B] hover:text-[#1E3A8A] transition duration-300">About</a>
+                <a href="index.html#services" class="text-[#333D4B] hover:text-[#1E3A8A] transition duration-300">Services</a>
+                <a href="index.html#expertise" class="text-[#333D4B] hover:text-[#1E3A8A] transition duration-300">Insights</a>
+                <a href="index.html#contact" class="bg-[#1E3A8A] text-white py-2 px-4 rounded-lg hover:bg-[#1C357A] transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">☰</button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="index.html#about" class="block py-2 text-[#333D4B] hover:text-[#1E3A8A]">About</a>
+            <a href="index.html#services" class="block py-2 text-[#333D4B] hover:text-[#1E3A8A]">Services</a>
+            <a href="index.html#expertise" class="block py-2 text-[#333D4B] hover:text-[#1E3A8A]">Insights</a>
+            <a href="index.html#contact" class="block mt-2 bg-[#1E3A8A] text-white text-center py-2 px-4 rounded-lg hover:bg-[#1C357A]">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-16">
+        <a href="index.html#expertise" class="text-[#1E3A8A] hover:underline mb-8 block">← Back to Insights</a>
+
+        <h1 class="text-3xl md:text-5xl font-bold text-[#1E3A8A] mb-6">Digital Public Infrastructure (DPI) & Alternatives: Building Equitable Digital Commons</h1>
+        <p class="text-lg text-gray-700 mb-8">
+            This pillar explores the transformative potential of Digital Public Infrastructure (DPI) as a counterpoint to closed, proprietary "walled gardens." DPI, built on principles of openness, interoperability, and user control, offers a pathway to more equitable and inclusive digital economies.
+        </p>
+
+        <!-- Content for DPI & Alternatives goes here -->
+        <div class="prose lg:prose-lg max-w-none text-gray-800">
+            <p>My work makes a strong case for how DPI can empower nano and micro enterprises, particularly artisans, by providing accessible digital identity, payment systems, and data exchange mechanisms that foster genuine economic agency. Unlike extractive platforms, DPI aims to create "digital commons" where value is shared and opportunities are democratized.</p>
+            <p>I analyze frameworks like the UN's Universal Digital Public Infrastructure Safeguards Framework to understand how to design and implement DPI that truly serves the most vulnerable, promoting mobility and prosperity without creating new forms of digital captivity. This involves examining the governance, design, and adoption strategies for DPI in diverse contexts.</p>
+            <h3>Key Areas of Focus:</h3>
+            <ul class="list-disc list-inside space-y-2">
+                <li>The foundational components of effective and inclusive DPI (identity, payments, data exchange).</li>
+                <li>Case studies of successful DPI implementation and their impact on informal economies.</li>
+                <li>Policy recommendations for governments and funders to support the development and adoption of equitable DPI.</li>
+                <li>How DPI can offer artisans and small businesses alternatives to reliance on large, controlling digital platforms.</li>
+            </ul>
+            <!-- Add more content, sub-sections, links to your specific research/blog posts here -->
+        </div>
+
+    </main>
+
+    <!-- Footer (Consistent with main page) -->
+    <footer class="bg-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center text-gray-600">
+            <p>&copy; 2025 V. Sreenivasan. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://www.linkedin.com/in/vidyuthsreenivasan" target="_blank" class="hover:text-[#1E3A8A]">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnButton = mobileMenuButton.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnButton) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
